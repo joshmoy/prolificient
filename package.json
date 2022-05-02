@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^1.5.1",
+    "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@hookform/resolvers": "^2.8.8",

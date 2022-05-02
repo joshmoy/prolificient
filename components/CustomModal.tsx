@@ -13,11 +13,12 @@ import { ReactNode } from 'react'
 type Props = {
   onClose: () => void
   isOpen: boolean
+  headerText: string
   children: ReactNode
   width?: any
 }
 
-const CustomModal = ({ onClose, isOpen, children, width, ...rest }: Props) => {
+const CustomModal = ({ onClose, isOpen, children, width, headerText, ...rest }: Props) => {
   return (
     <Modal onClose={onClose} isOpen={isOpen} isCentered scrollBehavior="inside">
       <ModalOverlay bgColor="rgba(0, 0, 0, 0.4)" />
@@ -32,7 +33,7 @@ const CustomModal = ({ onClose, isOpen, children, width, ...rest }: Props) => {
           fontSize={{ base: '2.4rem', lg: '3.4rem' }}
           lineHeight="5.4rem"
           textTransform="capitalize">
-          Watch Video
+          {headerText || 'Watch Video'}
         </ModalHeader>
         <ModalCloseButton _focus={{ boxShadow: 'none' }} />
 
